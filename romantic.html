@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Lines</title>
+    <link rel="stylesheet" href="css/romantic.css">
+</head>
+<body>
+    <div class="container">
+        <div id="romantic-text"></div>
+        <button class="button" onclick="location.href='lastpage.html'">finally</button>
+    </div>
+
+    <script>
+        const romanticLines = [
+            "Every moment with you feels like a dream ❤️",
+            
+            "You were the first and the last to make my heart skip a beat 💓",
+            "You're the missing piece to my puzzle 💝",
+            "My world is brighter when you keep smiling 😁✨",
+            "You will be the only  notification I would want to head 📱",
+            "Together is my favorite place to be 🏡 aka ... uk it😏 ",
+            "I fall in love with you more every day , even if I fight , i always will💘",
+            "You're the best part of my day 🌟",
+            "Btw sorry for today its not that i want to fight , i been putting efforts too nah😢"
+        ];
+
+        let currentIndex = 0;
+        const textElement = document.getElementById('romantic-text');
+
+        function typeWriter(text, index) {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                setTimeout(() => typeWriter(text, index + 1), 100);
+            } else {
+                setTimeout(showNextLine, 2000);
+            }
+        }
+
+        function showNextLine() {
+            textElement.innerHTML = '';
+            currentIndex = (currentIndex + 1) % romanticLines.length;
+            typeWriter(romanticLines[currentIndex], 0);
+        }
+
+        // Start the animation
+        typeWriter(romanticLines[0], 0);
+    </script>
+</body>
+</html>

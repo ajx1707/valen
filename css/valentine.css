@@ -1,0 +1,69 @@
+body {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Courier";
+  background-color: #fff5e4;
+  color: #ff9494;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+#valentineQuestion {
+  font-size: 50px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.answerButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: "courier";
+  margin-bottom: 20px;
+  background-color: #ffe3e1;
+  color: #e67373;
+  border-radius: 12px;
+  border: 2px solid #ffe3e1;
+  box-shadow: 1px 1px 2px #ff9494;
+  transition: 0.3s;
+}
+
+.answerButton:hover {
+  background-color: #ff9494;
+  color: #ffe3e1;
+  border: 2px solid #ff9494;
+  box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+@media screen and (max-width: 768px) {
+  #valentineQuestion {
+    font-size: 30px;
+  }
+  
+  .answerButton {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin-top: 20px;
+  }
+  
+  #valentineQuestion {
+    font-size: 24px;
+  }
+  
+  .answerButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin: 6px;
+  }
+}
